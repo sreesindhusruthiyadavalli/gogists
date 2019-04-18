@@ -1,0 +1,16 @@
+syntax = "proto3";
+ 
+package main;
+ 
+service MyMathService {
+	rpc Add (NumbersRequest) returns (AnswerReply) {}
+}
+ 
+message NumbersRequest {
+	int32 a = 1;
+	int32 b = 2;
+}
+ 
+message AnswerReply {
+	int32 ans = 1;
+}
